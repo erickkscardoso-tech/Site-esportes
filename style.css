@@ -1,0 +1,2397 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    background: #eef3f8;
+    color: #102a43;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+header,
+.cabecalho {
+    width: 100%;
+    min-height: 90px;
+    padding: 15px 5%;
+
+    background: #071a2d;
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+.conteudo-cabecalho,
+.cabecalho-titulo {
+    flex: 1;
+}
+
+.conteudo-cabecalho h1,
+.cabecalho-titulo h1 {
+    font-size: 25px;
+    line-height: 1.2;
+    margin-bottom: 3px;
+}
+
+.conteudo-cabecalho p,
+.cabecalho-titulo p {
+    color: #b9ccdc;
+    font-size: 13px;
+}
+
+header nav,
+.cabecalho nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+header nav a,
+.cabecalho nav a {
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+
+    transition: 0.25s ease;
+}
+
+header nav a:hover,
+.cabecalho nav a:hover,
+.cabecalho nav a.ativo {
+    color: #4db8ff;
+}
+
+
+/* =========================================================
+   HERO PRINCIPAL
+========================================================= */
+
+.hero {
+    min-height: 650px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-imagem {
+    position: absolute;
+    inset: -20px;
+
+    background-image: url("imagens/fundo-principal.jpg");
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(4px);
+
+    transform: scale(1.05);
+
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(4, 18, 32, 0.88),
+        rgba(4, 18, 32, 0.55),
+        rgba(4, 18, 32, 0.25)
+    );
+
+    z-index: 1;
+}
+
+.hero-conteudo {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1100px, 90%);
+
+    margin: auto;
+
+    color: white;
+}
+
+.hero-tag {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    margin-bottom: 20px;
+
+    border-left: 4px solid #3da9fc;
+
+    color: #70c5ff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.hero-conteudo h2 {
+    max-width: 750px;
+
+    font-size: clamp(42px, 6vw, 72px);
+
+    line-height: 1.08;
+
+    margin-bottom: 25px;
+}
+
+.hero-conteudo h2 strong {
+    color: #4db8ff;
+}
+
+.hero-conteudo > p {
+    max-width: 650px;
+
+    font-size: 18px;
+
+    color: #e2edf5;
+
+    margin-bottom: 35px;
+}
+
+.botao-principal {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 14px 25px;
+
+    background: #1688d8;
+
+    color: white;
+
+    border-radius: 8px;
+
+    font-weight: 800;
+
+    transition: 0.25s ease;
+}
+
+.botao-principal:hover {
+    background: #0b70b8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   INTRODUÇÃO
+========================================================= */
+
+.introducao {
+    width: min(1150px, 90%);
+
+    margin: auto;
+
+    padding: 100px 0;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+.titulo-pequeno {
+    display: block;
+
+    color: #1688d8;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.introducao-texto h2,
+.destaque-texto h2,
+.sobre-texto h2,
+.local-texto h2 {
+    font-size: clamp(30px, 4vw, 45px);
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.introducao-texto p,
+.destaque-texto p,
+.sobre-texto p {
+    color: #52677a;
+
+    margin-bottom: 17px;
+}
+
+.introducao-imagem img {
+    width: 100%;
+
+    height: 430px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+}
+
+
+/* =========================================================
+   ESPORTES
+========================================================= */
+
+.secao-esportes {
+    padding: 100px 5%;
+
+    background: white;
+}
+
+.titulo-secao {
+    max-width: 800px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.titulo-secao > span {
+    color: #1688d8;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.titulo-secao h2 {
+    margin: 10px 0 15px;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.2;
+}
+
+.titulo-secao p {
+    color: #60758a;
+}
+
+.cards-esportes {
+    width: min(1150px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card-esporte {
+    background: #f5f8fb;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid #dce6ee;
+
+    transition: 0.3s ease;
+}
+
+.card-esporte:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(16, 42, 67, 0.12);
+}
+
+.imagem-card {
+    height: 250px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.imagem-card img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.numero-card {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #071a2d;
+
+    color: white;
+
+    font-weight: 800;
+}
+
+.conteudo-card {
+    padding: 25px;
+}
+
+.conteudo-card h3 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.conteudo-card p {
+    color: #60758a;
+
+    margin-bottom: 20px;
+}
+
+.conteudo-card strong {
+    color: #1688d8;
+}
+
+
+/* =========================================================
+   FRASE DE IMPACTO
+========================================================= */
+
+.frase-impacto {
+    min-height: 400px;
+
+    padding: 80px 5%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #071a2d;
+
+    color: white;
+}
+
+.frase-impacto span {
+    color: #4db8ff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.frase-impacto h2 {
+    max-width: 800px;
+
+    margin-top: 20px;
+
+    font-size: clamp(30px, 5vw, 55px);
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   DESTAQUE
+========================================================= */
+
+.destaque {
+    width: min(1150px, 90%);
+
+    margin: auto;
+
+    padding: 100px 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.destaque-imagem img {
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+}
+
+.botao-secundario {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 13px 22px;
+
+    border: 2px solid #1688d8;
+
+    border-radius: 8px;
+
+    color: #1688d8;
+
+    font-weight: 800;
+
+    transition: 0.25s ease;
+}
+
+.botao-secundario:hover {
+    background: #1688d8;
+
+    color: white;
+}
+
+
+/* =========================================================
+   SOBRE
+========================================================= */
+
+.sobre {
+    padding: 100px 5%;
+
+    background: white;
+}
+
+.sobre-conteudo {
+    width: min(1150px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.8fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.sobre-imagem img {
+    width: 100%;
+
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+}
+
+
+/* =========================================================
+   LOCAL
+========================================================= */
+
+.local {
+    width: min(1150px, 90%);
+
+    margin: auto;
+
+    padding: 100px 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.local-texto p {
+    color: #60758a;
+
+    margin-bottom: 25px;
+}
+
+.local-imagem img {
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+}
+
+
+/* =========================================================
+   PÁGINAS DE ESPORTES
+========================================================= */
+
+.hero-esporte {
+    width: 100%;
+
+    min-height: 650px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+}
+
+.hero-esporte::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(3, 17, 29, 0.88),
+        rgba(3, 17, 29, 0.55),
+        rgba(3, 17, 29, 0.20)
+    );
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   FUNDOS DOS ESPORTES
+========================================================= */
+
+.hero-volei {
+    background-image: url("imagens/vôlei.jpg");
+}
+
+.hero-futebol {
+    background-image: url("imagens/futebolfundo.jpg");
+}
+
+.hero-basquete {
+    background-image: url("imagens/basquete .jpg");
+}
+
+
+/* =========================================================
+   TEXTO DOS ESPORTES
+========================================================= */
+
+.hero-esporte .hero-conteudo {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1100px, 90%);
+
+    margin: auto;
+
+    color: white;
+}
+
+.categoria-esporte {
+    display: block;
+
+    color: #4db8ff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.hero-esporte h1 {
+    max-width: 800px;
+
+    font-size: clamp(45px, 7vw, 80px);
+
+    line-height: 1;
+
+    margin: 15px 0;
+}
+
+.hero-esporte p {
+    max-width: 650px;
+
+    font-size: 22px;
+
+    line-height: 1.5;
+
+    color: #e1edf5;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES DO ESPORTE
+========================================================= */
+
+.info-esporte {
+    width: min(1100px, 90%);
+
+    margin: auto;
+
+    padding: 80px 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.9fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.texto-esporte h2 {
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.texto-esporte p {
+    color: #52677a;
+
+    margin-bottom: 17px;
+}
+
+.imagem-esporte {
+    width: 100%;
+
+    height: 430px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+}
+
+
+/* =========================================================
+   DADOS
+========================================================= */
+
+.dados-esporte,
+.dados-basquete {
+    padding: 80px 5%;
+
+    text-align: center;
+
+    background: white;
+}
+
+.dados-esporte h2,
+.dados-basquete h2 {
+    font-size: 38px;
+
+    margin-bottom: 40px;
+}
+
+.cards-dados {
+    width: min(1100px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.card-dado {
+    padding: 35px 20px;
+
+    background: #eef5fa;
+
+    border-radius: 14px;
+
+    border: 1px solid #d9e5ed;
+}
+
+.card-dado strong {
+    display: block;
+
+    color: #1688d8;
+
+    font-size: 45px;
+
+    line-height: 1;
+
+    margin-bottom: 12px;
+}
+
+.card-dado span {
+    color: #52677a;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   HISTÓRIA
+========================================================= */
+
+.historia-volei,
+.historia-futebol,
+.historia-basquete {
+    width: min(900px, 90%);
+
+    margin: auto;
+
+    padding: 100px 0;
+}
+
+.historia-volei h2,
+.historia-futebol h2,
+.historia-basquete h2 {
+    font-size: 42px;
+
+    margin-bottom: 25px;
+}
+
+.historia-volei p,
+.historia-futebol p,
+.historia-basquete p {
+    color: #52677a;
+
+    margin-bottom: 18px;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   REGRAS
+========================================================= */
+
+.regras-esporte,
+.regras-basquete,
+.regras-futebol {
+    padding: 90px 5%;
+
+    background: white;
+
+    text-align: center;
+}
+
+.regras-esporte h2,
+.regras-basquete h2,
+.regras-futebol h2 {
+    font-size: 42px;
+
+    margin-bottom: 40px;
+}
+
+.cards-regras {
+    width: min(1100px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.card-regra {
+    padding: 30px;
+
+    background: #eef5fa;
+
+    border-radius: 14px;
+
+    border: 1px solid #dce7ef;
+
+    text-align: left;
+}
+
+.card-regra h3 {
+    margin-bottom: 12px;
+
+    font-size: 20px;
+}
+
+.card-regra p {
+    color: #60758a;
+}
+
+
+/* =========================================================
+   CAMPEONATOS
+========================================================= */
+
+.campeonatos-esporte,
+.campeonatos-futebol,
+.campeonatos-basquete {
+    width: min(1150px, 90%);
+
+    margin: auto;
+
+    padding: 100px 0;
+
+    text-align: center;
+}
+
+.campeonatos-esporte h2,
+.campeonatos-futebol h2,
+.campeonatos-basquete h2 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.texto-secao,
+.texto-introducao,
+.subtitulo {
+    max-width: 750px;
+
+    margin: 0 auto 40px;
+
+    color: #60758a;
+}
+
+.cards-campeonatos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    text-align: left;
+}
+
+.card-campeonato {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 16px;
+
+    border: 1px solid #dce6ee;
+
+    box-shadow: 0 8px 25px rgba(16, 42, 67, 0.06);
+}
+
+.card-campeonato img {
+    width: 100%;
+
+    height: 240px;
+
+    object-fit: cover;
+}
+
+.conteudo-campeonato {
+    padding: 25px;
+}
+
+.conteudo-campeonato span {
+    color: #1688d8;
+
+    font-weight: 800;
+}
+
+.conteudo-campeonato h3 {
+    font-size: 25px;
+
+    margin: 5px 0 10px;
+}
+
+.conteudo-campeonato p {
+    color: #60758a;
+}
+
+
+/* =========================================================
+   JOGADORES
+========================================================= */
+
+.jogadores-esporte,
+.jogadores-futebol,
+.jogadores-basquete {
+    padding: 100px 5%;
+
+    background: #071a2d;
+
+    color: white;
+
+    text-align: center;
+}
+
+.jogadores-esporte h2,
+.jogadores-futebol h2,
+.jogadores-basquete h2 {
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.jogadores-esporte .texto-secao,
+.jogadores-futebol .texto-introducao,
+.jogadores-basquete .subtitulo {
+    color: #b7c7d4;
+}
+
+.cards-jogadores {
+    width: min(1100px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    text-align: left;
+}
+
+.card-jogador {
+    overflow: hidden;
+
+    background: #102a43;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.card-jogador img {
+    width: 100%;
+
+    height: 450px;
+
+    object-fit: cover;
+}
+
+.conteudo-jogador,
+.conteudo-card-jogador {
+    padding: 25px;
+}
+
+.conteudo-jogador span,
+.conteudo-card-jogador span {
+    color: #4db8ff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.conteudo-jogador h3,
+.conteudo-card-jogador h3 {
+    font-size: 24px;
+
+    margin: 5px 0 10px;
+}
+
+.conteudo-jogador p,
+.conteudo-card-jogador p {
+    color: #bdccd8;
+}
+
+
+/* =========================================================
+   TIMES
+========================================================= */
+
+.times-basquete {
+    padding: 100px 5%;
+
+    text-align: center;
+}
+
+.times-basquete h2 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.cards-times {
+    width: min(1100px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    text-align: left;
+}
+
+.card-time {
+    background: white;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    border: 1px solid #dce6ee;
+
+    box-shadow: 0 8px 25px rgba(16, 42, 67, 0.07);
+}
+
+.card-time img {
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+}
+
+.conteudo-card-time {
+    padding: 25px;
+}
+
+.conteudo-card-time span {
+    color: #1688d8;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+.conteudo-card-time h3 {
+    margin: 5px 0 10px;
+
+    font-size: 24px;
+}
+
+.conteudo-card-time p {
+    color: #60758a;
+}
+
+
+/* =========================================================
+   MODALIDADES
+========================================================= */
+
+.modalidades-futebol {
+    padding: 100px 5%;
+
+    background: white;
+
+    text-align: center;
+}
+
+.modalidades-futebol h2 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.cards-modalidades {
+    width: min(1100px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    text-align: left;
+}
+
+.card-modalidade {
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: #f1f6fa;
+
+    border: 1px solid #dce6ee;
+}
+
+.card-modalidade img {
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+}
+
+.conteudo-modalidade {
+    padding: 25px;
+}
+
+.conteudo-modalidade > span {
+    color: #1688d8;
+
+    font-weight: 800;
+}
+
+.conteudo-modalidade h3 {
+    margin: 5px 0 10px;
+
+    font-size: 25px;
+}
+
+.conteudo-modalidade p {
+    color: #60758a;
+}
+
+
+/* =========================================================
+   VÍDEOS
+========================================================= */
+
+.video-esporte {
+    width: min(1100px, 90%);
+
+    margin: 80px auto;
+
+    text-align: center;
+}
+
+.video-esporte .titulo-pequeno {
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+.video-esporte h2 {
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.video-esporte p {
+    max-width: 750px;
+
+    margin: 0 auto 30px;
+
+    color: #60758a;
+}
+
+
+/* MP4 */
+
+.video-esporte video {
+    display: block;
+
+    width: 100%;
+
+    max-width: 850px;
+
+    height: auto;
+
+    margin: 0 auto;
+
+    background: #000;
+
+    border-radius: 18px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.20);
+}
+
+
+/* YOUTUBE */
+
+.video-esporte iframe {
+    display: block;
+
+    width: 100%;
+
+    max-width: 850px;
+
+    height: 480px;
+
+    margin: 0 auto;
+
+    border: none;
+
+    border-radius: 18px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================================
+   RANKING
+========================================================= */
+
+.ranking-simples {
+    width: min(1100px, 90%);
+
+    margin: 80px auto;
+
+    padding: 70px 50px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    border: 1px solid #dce6ee;
+
+    box-shadow: 0 8px 25px rgba(16, 42, 67, 0.06);
+}
+
+.ranking-simples h2 {
+    color: #102a43;
+
+    font-size: 40px;
+
+    margin-bottom: 12px;
+}
+
+.ranking-simples > p {
+    color: #627d98;
+
+    max-width: 750px;
+
+    margin-bottom: 35px;
+}
+
+.lista-ranking {
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+    counter-reset: ranking;
+}
+
+.lista-ranking li {
+    counter-increment: ranking;
+
+    min-height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px 20px;
+
+    margin-bottom: 10px;
+
+    background: #f5f8fb;
+
+    border-radius: 12px;
+
+    border: 1px solid #d9e2ec;
+
+    transition: 0.2s ease;
+}
+
+.lista-ranking li:hover {
+    transform: translateX(5px);
+
+    background: #eef5fa;
+}
+
+.lista-ranking li::before {
+    content: counter(ranking);
+
+    min-width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #102a43;
+
+    color: white;
+
+    font-weight: 800;
+}
+
+.lista-ranking strong {
+    flex: 1;
+
+    color: #102a43;
+
+    font-size: 18px;
+}
+
+.lista-ranking span {
+    color: #627d98;
+
+    font-size: 14px;
+
+    text-align: right;
+
+    max-width: 450px;
+}
+
+
+/* =========================================================
+   TRAJETÓRIA
+========================================================= */
+
+.minha-trajetoria-no-volei,
+.minha-trajetoria-no-futebol,
+.minha-trajetoria-no-basquete {
+    padding: 100px 5%;
+}
+
+.minha-trajetoria-no-volei h2,
+.minha-trajetoria-no-futebol h2,
+.minha-trajetoria-no-basquete h2 {
+    font-size: 42px;
+
+    margin-bottom: 40px;
+}
+
+.trajetoria-volei,
+.trajetoria-futebol,
+.trajetoria-basquete {
+    width: min(1100px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.texto-trajetoria-volei p,
+.texto-trajetoria-futebol p,
+.texto-trajetoria-basquete p {
+    color: #52677a;
+
+    margin-bottom: 18px;
+}
+
+.imagem-trajetoria-volei,
+.imagem-trajetoria-futebol,
+.imagem-trajetoria-basquete {
+    width: 100%;
+
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+}
+
+
+/* =========================================================
+   CURIOSIDADES
+========================================================= */
+
+.curiosidades-esporte,
+.curiosidades-basquete {
+    padding: 100px 5%;
+
+    background: #f7fafc;
+
+    text-align: center;
+}
+
+.curiosidades-esporte h2,
+.curiosidades-basquete h2 {
+    font-size: 42px;
+
+    margin-bottom: 40px;
+}
+
+.cards-curiosidades {
+    width: min(1000px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card-curiosidade {
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    border: 1px solid #dce6ee;
+
+    text-align: left;
+}
+
+.card-curiosidade span {
+    display: block;
+
+    color: #1688d8;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+.card-curiosidade p {
+    color: #60758a;
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR
+========================================================= */
+
+.voltar-container {
+    padding: 60px 5%;
+
+    text-align: center;
+
+    background: #eef3f8;
+}
+
+.botao-voltar {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 8px;
+
+    background: #071a2d;
+
+    color: white;
+
+    font-weight: 800;
+
+    transition: 0.25s ease;
+}
+
+.botao-voltar:hover {
+    background: #1688d8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MAPA
+========================================================= */
+
+.caixa-mapa {
+    width: min(1000px, 90%);
+
+    margin: 70px auto;
+
+    padding: 45px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(16, 42, 67, 0.08);
+}
+
+.caixa-mapa > h1 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.caixa-mapa > p {
+    color: #60758a;
+
+    margin-bottom: 30px;
+}
+
+.mapa {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    border: 1px solid #dce6ee;
+}
+
+.mapa iframe {
+    display: block;
+
+    width: 100%;
+
+    height: 450px;
+
+    border: 0;
+}
+
+.endereco-mapa {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background: #eef5fa;
+
+    border-radius: 12px;
+}
+
+.endereco-mapa h2 {
+    margin-bottom: 8px;
+}
+
+.endereco-mapa p {
+    color: #60758a;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+========================================================= */
+
+.caixa-formulario {
+    width: min(700px, 90%);
+
+    margin: 70px auto;
+
+    padding: 45px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(16, 42, 67, 0.08);
+}
+
+.caixa-formulario h1 {
+    font-size: 40px;
+
+    margin-bottom: 8px;
+}
+
+.descricao-formulario {
+    color: #60758a;
+
+    margin-bottom: 30px;
+}
+
+.caixa-formulario form {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.caixa-formulario label {
+    margin-bottom: 7px;
+
+    font-weight: 700;
+
+    color: #102a43;
+}
+
+.caixa-formulario input,
+.caixa-formulario textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #ccd9e3;
+
+    border-radius: 8px;
+
+    background: #f8fafc;
+
+    color: #102a43;
+
+    outline: none;
+}
+
+.caixa-formulario input:focus,
+.caixa-formulario textarea:focus {
+    border-color: #1688d8;
+
+    box-shadow: 0 0 0 3px rgba(22, 136, 216, 0.12);
+}
+
+.caixa-formulario textarea {
+    resize: vertical;
+
+    min-height: 140px;
+}
+
+.caixa-formulario button {
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #1688d8;
+
+    color: white;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.caixa-formulario button:hover {
+    background: #0b70b8;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #061522;
+
+    color: white;
+}
+
+.footer-conteudo {
+    width: min(1150px, 90%);
+
+    margin: auto;
+
+    padding: 60px 0;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+.footer-principal img,
+.footer-logo img {
+    width: 65px;
+
+    margin-bottom: 15px;
+}
+
+.footer-principal h3,
+.footer-logo h2 {
+    margin-bottom: 8px;
+}
+
+.footer-principal p,
+.footer-logo p {
+    color: #aebdca;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.footer-links h3 {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #b7c6d2;
+
+    transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #4db8ff;
+}
+
+.footer-final {
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    padding: 20px 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #9eafbd;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* CABEÇALHO */
+
+    header,
+    .cabecalho {
+        flex-wrap: wrap;
+
+        padding: 15px 4%;
+    }
+
+    header nav,
+    .cabecalho nav {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 18px;
+    }
+
+
+    /* GRID PRINCIPAL */
+
+    .introducao,
+    .destaque,
+    .sobre-conteudo,
+    .local,
+    .info-esporte,
+    .trajetoria-volei,
+    .trajetoria-futebol,
+    .trajetoria-basquete {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    /* CARDS */
+
+    .cards-esportes,
+    .cards-campeonatos,
+    .cards-modalidades,
+    .cards-times {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-dados,
+    .cards-regras,
+    .cards-jogadores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* IMAGENS */
+
+    .introducao-imagem img,
+    .destaque-imagem img,
+    .sobre-imagem img,
+    .local-imagem img,
+    .imagem-esporte,
+    .imagem-trajetoria-volei,
+    .imagem-trajetoria-futebol,
+    .imagem-trajetoria-basquete {
+        height: 380px;
+    }
+
+
+    /* HERO */
+
+    .hero-esporte {
+        min-height: 560px;
+    }
+
+    .hero-esporte h1 {
+        font-size: 65px;
+    }
+
+
+    /* JOGADORES */
+
+    .card-jogador img {
+        height: 380px;
+    }
+
+
+    /* VÍDEOS */
+
+    .video-esporte video {
+        min-height: 300px;
+    }
+
+    .video-esporte iframe {
+        height: 400px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-conteudo {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* =====================================================
+       CABEÇALHO
+    ===================================================== */
+
+    header,
+    .cabecalho {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        gap: 12px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+    }
+
+    .conteudo-cabecalho,
+    .cabecalho-titulo {
+        width: 100%;
+
+        flex: none;
+    }
+
+    .conteudo-cabecalho h1,
+    .cabecalho-titulo h1 {
+        font-size: 21px;
+    }
+
+    .conteudo-cabecalho p,
+    .cabecalho-titulo p {
+        font-size: 12px;
+    }
+
+    header nav,
+    .cabecalho nav {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px 18px;
+    }
+
+    header nav a,
+    .cabecalho nav a {
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+        min-height: 560px;
+    }
+
+    .hero-conteudo {
+        width: 90%;
+    }
+
+    .hero-tag {
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .hero-conteudo h2 {
+        font-size: 40px;
+
+        line-height: 1.1;
+    }
+
+    .hero-conteudo > p {
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+    .botao-principal {
+        padding: 13px 20px;
+
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       ESPAÇAMENTOS
+    ===================================================== */
+
+    .introducao,
+    .destaque,
+    .local,
+    .info-esporte {
+        width: 90%;
+
+        padding: 60px 0;
+    }
+
+    .sobre,
+    .secao-esportes,
+    .modalidades-futebol,
+    .regras-esporte,
+    .regras-basquete,
+    .regras-futebol,
+    .jogadores-esporte,
+    .jogadores-futebol,
+    .jogadores-basquete,
+    .curiosidades-esporte,
+    .curiosidades-basquete {
+        padding: 60px 5%;
+    }
+
+
+    /* =====================================================
+       IMAGENS
+    ===================================================== */
+
+    .introducao-imagem img,
+    .destaque-imagem img,
+    .sobre-imagem img,
+    .local-imagem img,
+    .imagem-esporte,
+    .imagem-trajetoria-volei,
+    .imagem-trajetoria-futebol,
+    .imagem-trajetoria-basquete {
+        width: 100%;
+
+        height: 300px;
+
+        border-radius: 14px;
+    }
+
+
+    /* =====================================================
+       CARDS
+    ===================================================== */
+
+    .cards-esportes,
+    .cards-campeonatos,
+    .cards-modalidades,
+    .cards-jogadores,
+    .cards-times,
+    .cards-curiosidades,
+    .cards-dados,
+    .cards-regras {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .imagem-card {
+        height: 220px;
+    }
+
+    .card-jogador img {
+        height: 360px;
+    }
+
+    .card-time img {
+        height: 300px;
+    }
+
+    .card-campeonato img,
+    .card-modalidade img {
+        height: 220px;
+    }
+
+
+    /* =====================================================
+       TÍTULOS
+    ===================================================== */
+
+    .titulo-secao h2,
+    .texto-esporte h2,
+    .historia-volei h2,
+    .historia-futebol h2,
+    .historia-basquete h2,
+    .regras-esporte h2,
+    .regras-basquete h2,
+    .regras-futebol h2,
+    .campeonatos-esporte h2,
+    .campeonatos-futebol h2,
+    .campeonatos-basquete h2,
+    .jogadores-esporte h2,
+    .jogadores-futebol h2,
+    .jogadores-basquete h2,
+    .times-basquete h2,
+    .modalidades-futebol h2,
+    .curiosidades-esporte h2,
+    .curiosidades-basquete h2,
+    .minha-trajetoria-no-volei h2,
+    .minha-trajetoria-no-futebol h2,
+    .minha-trajetoria-no-basquete h2,
+    .ranking-simples h2 {
+        font-size: 30px;
+
+        line-height: 1.2;
+    }
+
+
+    /* =====================================================
+       HERO DOS ESPORTES
+    ===================================================== */
+
+    .hero-esporte {
+        min-height: 500px;
+
+        background-position: center;
+    }
+
+    .hero-esporte .hero-conteudo {
+        width: 90%;
+    }
+
+    .categoria-esporte {
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .hero-esporte h1 {
+        font-size: 52px;
+    }
+
+    .hero-esporte p {
+        max-width: 100%;
+
+        font-size: 17px;
+
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       HISTÓRIA
+    ===================================================== */
+
+    .historia-volei,
+    .historia-futebol,
+    .historia-basquete {
+        width: 90%;
+
+        padding: 60px 0;
+    }
+
+
+    /* =====================================================
+       TRAJETÓRIA
+    ===================================================== */
+
+    .minha-trajetoria-no-volei,
+    .minha-trajetoria-no-futebol,
+    .minha-trajetoria-no-basquete {
+        padding: 60px 5%;
+    }
+
+    .trajetoria-volei,
+    .trajetoria-futebol,
+    .trajetoria-basquete {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    /* =====================================================
+       VÍDEOS
+    ===================================================== */
+
+    .video-esporte {
+        width: 90%;
+
+        margin: 50px auto;
+    }
+
+    .video-esporte h2 {
+        font-size: 30px;
+
+        line-height: 1.2;
+    }
+
+    .video-esporte p {
+        font-size: 15px;
+    }
+
+    .video-esporte video {
+        width: 100%;
+
+        min-height: 0;
+
+        height: auto;
+
+        border-radius: 12px;
+    }
+
+    .video-esporte iframe {
+        width: 100%;
+
+        height: 220px;
+
+        border-radius: 12px;
+    }
+
+
+    /* =====================================================
+       RANKING
+    ===================================================== */
+
+    .ranking-simples {
+        width: 90%;
+
+        margin: 50px auto;
+
+        padding: 35px 18px;
+    }
+
+    .lista-ranking li {
+        min-height: auto;
+
+        align-items: center;
+
+        gap: 10px;
+
+        padding: 13px;
+    }
+
+    .lista-ranking li::before {
+        min-width: 32px;
+
+        width: 32px;
+
+        height: 32px;
+
+        font-size: 13px;
+    }
+
+    .lista-ranking strong {
+        font-size: 15px;
+    }
+
+    .lista-ranking span {
+        display: none;
+    }
+
+
+    /* =====================================================
+       MAPA
+    ===================================================== */
+
+    .caixa-mapa,
+    .caixa-formulario {
+        width: 90%;
+
+        padding: 25px 20px;
+
+        margin: 40px auto;
+    }
+
+    .caixa-mapa > h1,
+    .caixa-formulario h1 {
+        font-size: 30px;
+
+        line-height: 1.2;
+    }
+
+    .mapa iframe {
+        width: 100%;
+
+        height: 300px;
+
+        min-height: 300px;
+    }
+
+
+    /* =====================================================
+       FORMULÁRIO
+    ===================================================== */
+
+    .caixa-formulario input,
+    .caixa-formulario textarea {
+        font-size: 16px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer-conteudo {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 30px;
+
+        padding: 45px 0;
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+
+    .footer-final {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 18px 5%;
+    }
+}
+
+
+/* =========================================================
+   CELULARES MUITO PEQUENOS
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .logo {
+        width: 55px;
+
+        height: 55px;
+    }
+
+    header nav {
+        gap: 8px 12px;
+    }
+
+    header nav a {
+        font-size: 12px;
+    }
+
+    .hero-conteudo h2 {
+        font-size: 34px;
+    }
+
+    .hero-esporte h1 {
+        font-size: 44px;
+    }
+
+    .hero-esporte p {
+        font-size: 15px;
+    }
+
+    .botao-principal {
+        width: 100%;
+
+        justify-content: center;
+    }
+}
